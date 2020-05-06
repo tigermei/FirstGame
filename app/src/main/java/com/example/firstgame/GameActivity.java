@@ -35,7 +35,8 @@ public class GameActivity extends AppCompatActivity {
 
         mGame = findViewById(R.id.game);
 
-        BlockAdapter adapter = new BlockAdapter();
+        BlockAdapter.ItemData []itemdata = new BlockAdapter.ItemData[150];
+        BlockAdapter adapter = new BlockAdapter(itemdata, GameActivity.this);
         mGame.setAdapter(adapter);
     }
 
