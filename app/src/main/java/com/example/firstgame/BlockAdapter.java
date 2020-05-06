@@ -16,6 +16,7 @@ public class BlockAdapter extends BaseAdapter {
     private List<ItemData> dataList = new ArrayList<ItemData>();
 
     public BlockAdapter(ItemData []list, Context context){
+        super();
         this.context = context;
         for(ItemData item:list){
             dataList.add(item);
@@ -24,17 +25,17 @@ public class BlockAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 0;
+        return dataList.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return dataList.get(position);
     }
 
     @Override
     public long getItemId(int position) {
-        return 0;
+        return position;
     }
 
     @Override
@@ -51,6 +52,9 @@ public class BlockAdapter extends BaseAdapter {
             view = (ViewHolder) convertView.getTag();
         }
 
+        ItemData itemData = dataList.get(position);
+        view.colorTxt.setBackground(context.getResources().getDrawable(itemData.itemResId));
+
         return null;
     }
 
@@ -58,10 +62,10 @@ public class BlockAdapter extends BaseAdapter {
         public TextView colorTxt;
     }
 
-    class ItemData{
-        private String itemRes;
-        public ItemData(String itemRes){
-            this.itemRes = itemRes;
+    static class ItemData{
+        private int itemResId;
+        public ItemData(int itemRes){
+            this.itemResId = itemRes;
         }
     }
 }

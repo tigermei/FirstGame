@@ -34,12 +34,18 @@ public class GameActivity extends AppCompatActivity {
         button.setOnClickListener(mChangeListener);
 
         mGame = findViewById(R.id.game);
-
-        BlockAdapter.ItemData []itemdata = new BlockAdapter.ItemData[150];
-        BlockAdapter adapter = new BlockAdapter(itemdata, GameActivity.this);
-        mGame.setAdapter(adapter);
+        fillItemData();
     }
 
+    private void fillItemData(){
+        BlockAdapter.ItemData []itemdataList = new BlockAdapter.ItemData[150];
+        for(int i = 0; i < 150; ++i){
+            BlockAdapter.ItemData item = new BlockAdapter.ItemData(R.color.red_1);
+            itemdataList[i] = item;
+        }
+        BlockAdapter adapter = new BlockAdapter(itemdataList, GameActivity.this);
+        mGame.setAdapter(adapter);
+    }
 
     View.OnClickListener mLeftListener = new View.OnClickListener(){
         @Override
