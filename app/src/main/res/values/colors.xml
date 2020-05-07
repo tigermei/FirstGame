@@ -13,4 +13,8 @@
     <color name="red_half_7">#aa00aa</color>
     <color name="green_half_8">#aaaa00</color>
     <color name="blue_half_9">#00aaaa</color>
+
+    <color name="black">#000000</color>
+
+    <color name="white">#ffffff</color>
 </resources>

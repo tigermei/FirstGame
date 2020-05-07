@@ -12,9 +12,15 @@
         <GridView
             android:id="@+id/game"
             android:layout_gravity="center"
-            android:layout_width="800px"
-            android:layout_height="1200px"
-            android:numColumns="15" />
+            android:gravity="center"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:verticalSpacing="1px"
+            android:horizontalSpacing="1px"
+            android:padding="2px"
+            android:scrollbars="none"
+            android:numColumns="10"
+            android:background="@color/black"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -25,34 +31,36 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
-                android:text="左"/>
+                android:text="@string/left"/>
             <Button
                 android:id="@+id/right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:text="右"/>
+                android:text="@string/right"/>
             <Button
                 android:id="@+id/down"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:text="下"/>
+                android:text="@string/down"/>
             <Button
                 android:id="@+id/change"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:text="变"/>
-
+                android:text="@string/change"/>
         </RelativeLayout>
-
+        <Button
+            android:id="@+id/start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:text="@string/start"/>
     </LinearLayout>
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
