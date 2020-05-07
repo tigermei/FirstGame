@@ -149,6 +149,7 @@ public class GameActivity extends AppCompatActivity {
             }
 
             Log.i(tag,"------rotate end------");
+            Log.i(tag,"------rotate end------");
         }
     }
 
