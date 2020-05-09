@@ -13,7 +13,7 @@
             android:id="@+id/game"
             android:layout_gravity="center"
             android:gravity="center"
-            android:layout_width="250dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:verticalSpacing="1px"
             android:horizontalSpacing="1px"

@@ -15,8 +15,8 @@ public class GameActivity extends AppCompatActivity {
     public final static int BLOCK_ROW_NUM = 20;
     public final static int BLOCK_NUM = 200;
 
-    public final static int MINI_BLOCK_COLUMN_NUM = 3;
-    public final static int MINI_BLOCK_ROW_NUM = 3;
+    public final static int MINI_BLOCK_COLUMN_NUM = 4;
+    public final static int MINI_BLOCK_ROW_NUM = 4;
     public final static int MINI_BLOCK_NUM = 9;
 
     GridView mGame;
@@ -59,7 +59,7 @@ public class GameActivity extends AppCompatActivity {
     private void fillItemData(){
         BlockAdapter.ItemData []itemdataList = new BlockAdapter.ItemData[GameActivity.BLOCK_NUM];
         for(int i = 0; i < GameActivity.BLOCK_NUM; ++i){
-            BlockAdapter.ItemData item = new BlockAdapter.ItemData(R.color.black, true);
+            BlockAdapter.ItemData item = new BlockAdapter.ItemData(R.color.white, true);
             itemdataList[i] = item;
         }
         adapter = new BlockAdapter(itemdataList, GameActivity.this);
@@ -99,7 +99,10 @@ public class GameActivity extends AppCompatActivity {
         public void onClick(View v){
             Log.v(tag, "start");
 
-            testRotate();
+            if(null != adapter){
+                adapter.start();
+            }
+            //testRotate();
 
         }
     };

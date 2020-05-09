@@ -6,6 +6,7 @@ public class Shape {
     public final static String tag = "Shape";
     public final static int row = 4;
     public final static int column = 4;
+    public final static int SHAPE_SIZE = 6;
     public static int[][][]shape = new int[][][]{
             {
                     {0, 1, 0, 0},
