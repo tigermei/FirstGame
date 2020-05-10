@@ -1,6 +1,8 @@
 package com.example.firstgame;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Message;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -529,13 +531,35 @@ public class BlockAdapter extends BaseAdapter {
         return true;
     }
 
+    private void showGameOverDialog(){
+        AlertDialog.Builder normalDialog =
+                new AlertDialog.Builder(context);
+        normalDialog.setTitle("游戏结束");
+        normalDialog.setMessage("Game Over!!!，得分："+nScore);
+        normalDialog.setPositiveButton("确定",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //TODO
+                    }
+                });
+        normalDialog.setNegativeButton("再来一局",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //TODO
+                    }
+                });
+        // 显示
+        normalDialog.show();
+    }
+
     //当游戏结束的时候触发
     private boolean onGameOver(){
         stopTimer();
-        Toast.makeText(context, "Game Over!!!",
-                Toast.LENGTH_LONG).show();
-
         notifyDataSetChanged();
+
+        showGameOverDialog();
         return true;
     }
 
