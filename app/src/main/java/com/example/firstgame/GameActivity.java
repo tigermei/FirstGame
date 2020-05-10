@@ -70,6 +70,9 @@ public class GameActivity extends AppCompatActivity {
         @Override
         public void onClick(View v){
             Log.v(tag, "Left");
+            if(null != adapter){
+                adapter.left();
+            }
         }
     };
 
@@ -77,6 +80,9 @@ public class GameActivity extends AppCompatActivity {
         @Override
         public void onClick(View v){
             Log.v(tag, "Right");
+            if(null != adapter){
+                adapter.right();
+            }
         }
     };
 
@@ -84,6 +90,9 @@ public class GameActivity extends AppCompatActivity {
         @Override
         public void onClick(View v){
             Log.v(tag, "Change");
+            if(null != adapter){
+                adapter.change();
+            }
         }
     };
 
@@ -91,6 +100,9 @@ public class GameActivity extends AppCompatActivity {
         @Override
         public void onClick(View v){
             Log.v(tag, "Down");
+            if(null != adapter){
+                adapter.down();
+            }
         }
     };
 

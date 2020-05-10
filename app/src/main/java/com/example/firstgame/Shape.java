@@ -51,7 +51,7 @@ public class Shape {
         1,2,3,4
     };
 
-    public static void moveTop(int [][]temp, int row, int column){
+    private static void moveTop(int [][]temp, int row, int column){
         for(int num = 0; num <Shape.row; ++num){
             //1.检查旋转后是否上移
             boolean top1All0 = true;
@@ -79,7 +79,7 @@ public class Shape {
         }
     }
 
-    public static void moveLeft(int [][]temp, int row, int column){
+    private static void moveLeft(int [][]temp, int row, int column){
 
         for(int num = 0; num < Shape.column; ++num){
             //2.检查旋转后是否上移或者左移
