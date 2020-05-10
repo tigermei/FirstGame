@@ -304,7 +304,7 @@ public class BlockAdapter extends BaseAdapter {
             moveShapeDataList.clear();
             double d = Math.random();
             int random = ((int)(d*10) % Shape.SHAPE_SIZE);
-            int [][]array = Shape.shape[0];
+            int [][]array = Shape.shape[random];
             currentShape = array;
 
             for(int j = 0; j < GameActivity.MINI_BLOCK_ROW_NUM; ++j){
