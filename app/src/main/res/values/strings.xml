@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">FirstGame</string>
+    <string name="left">左</string>
+    <string name="right">右</string>
+    <string name="change">变</string>
+    <string name="down">下</string>
+    <string name="start">开始</string>
 </resources>
