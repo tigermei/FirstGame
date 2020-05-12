@@ -271,6 +271,8 @@ public class BlockAdapter extends BaseAdapter {
             dataList.set(i, item);
         }
 
+        ++nScore;
+
         notifyDataSetChanged();
     }
 
